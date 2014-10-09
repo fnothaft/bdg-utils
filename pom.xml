@@ -370,11 +370,6 @@
         <artifactId>aws-java-sdk</artifactId>
         <version>1.7.5</version>
       </dependency>
-      <dependency>
-        <groupId>org.seqdoop</groupId>
-        <artifactId>hadoop-bam</artifactId>
-        <version>7.0.0</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
