@@ -17,7 +17,7 @@
  */
 package org.bdgenomics.utils.instrumentation
 
-import org.apache.spark.scheduler.{ StageInfo, SparkListenerStageCompleted, SparkListenerTaskEnd, SparkListener }
+import org.apache.spark.scheduler.{ SparkListener, SparkListenerStageCompleted, SparkListenerTaskEnd, StageInfo }
 import scala.concurrent.duration._
 
 /**
@@ -26,7 +26,7 @@ import scala.concurrent.duration._
  * @note This class relies on being run in the same process as the driver. However,
  * this is the way that Spark seems to work.
  */
-class MetricsListener(val metrics: Metrics) extends SparkListener {
+class MetricsListener(val metrics: BDGMetrics) extends SparkListener {
 
   private val sparkMetrics = metrics.sparkMetrics
 
